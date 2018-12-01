@@ -1,0 +1,25 @@
+{
+  "name": "rxstoinkboy",
+  "version": "0.0.1",
+  "description": "portfolio website",
+  "main": "index.js",
+  "scripts": {
+    "test": "\u001b[A\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[Cindex.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "\u001b[A\u001b[B\u0016https://github.com/RXstoinkboy/rxstoinkboy.git"
+  },
+  "keywords": [
+    "portfolio",
+    "front-end",
+    "web",
+    "developer",
+    "javascript",
+    "css",
+    "html",
+    "eslint"
+  ],
+  "author": "RXstoinkboy",
+  "license": "MIT"
+}
