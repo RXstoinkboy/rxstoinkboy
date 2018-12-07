@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css?family=Satisfy|Roboto|Charmonman|Lobster|Pacifico');
+@import 'variables';
+
+html {
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    width: 100%;
+    height: 100vh;
+    background-image: url(/src/images/background2.jpg);
+    background-position: center;
+    background-size: cover;
+    filter: blur(10%);
+}
+
+.hello{
+    // background-color: $background-transparent;
+    border-radius: 3px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    padding: 3%;
+    text-align: center;
+
+    .hello__intro{
+        font-size: $jumbo-text;
+        color: black;
+        text-shadow: -1px 1px 0 rgb(184, 184, 184);
+    }
+
+    .hello__intro--red{
+        color: rgb(131, 5, 5);
+    }
+
+    .hello__intro--small {
+        font-family: satisfy;
+        font-size: 0.8*$jumbo-text;
+        color: black;
+    }
+}
+
+.content {
+    width: 100%;
+    height: 100vh;
+    background-color: lime;
+
+    .nav {
+        height: 10vh;
+        width: 100%;
+        background-color: $background-transparent;
+        position: absolute;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 1%;
+        z-index: 10;
+    }
+
+}

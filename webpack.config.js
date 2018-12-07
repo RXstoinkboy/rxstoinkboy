@@ -4,27 +4,27 @@ module.exports = {
   },
   output: {
     path: `${__dirname}/dist/js`,
-    filename: 'bundle-[name].mjs'
+    filename: 'legacy-[name].mjs',
   },
   watch: true,
   mode: 'development', // ta opcja zostanie pominięta jeżeli użyjemy npm run build
   devtool: 'source-map',
   module: {
-    rules: [
-      {
-        test: /\.js$/,
-        exclude: /node_modules/,
-        use: {
-          loader: 'babel-loader',
-          options: {
-            presets: [['env', {
+    rules: [{
+      test: /\.js$/,
+      exclude: /node_modules/,
+      use: {
+        loader: 'babel-loader',
+        options: {
+          presets: [
+            ['env', {
               targets: {
-                browsers: ['> 1%']
-              }
-            }]]
-          }
-        }
-      }
-    ]
-  }
-}
+                browsers: ['> 1%'],
+              },
+            }],
+          ],
+        },
+      },
+    }],
+  },
+};
