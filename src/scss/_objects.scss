@@ -49,21 +49,23 @@
 .button{
     position: relative;
     background-color: rgba(252, 252, 252, 0.623);
-    border: 3px solid $light-blue;
-    border-radius: 5px;
-    color: $light-blue;
+    border: none;
+    border-radius: 40px;
+    color: $dark-blue;
     font-size: 40px;
-    padding: 15px;
     margin-top: 40px;
     display: flex;
     flex-direction: row;
     justify-content: center;
     width: 70%;
+    height: 80px;
     left: 50%;
     transform: translateX(-50%);
+    box-shadow: -5px 5px 20px black;
 
     .button__arrow{
         position: absolute;
+        color: $dark-red;
         right: 40px;
     }
 }
