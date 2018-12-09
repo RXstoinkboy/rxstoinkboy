@@ -1,9 +1,11 @@
 @import url('https://fonts.googleapis.com/css?family=Satisfy|Roboto|Charmonman|Lobster|Pacifico');
 @import 'variables';
+@import 'helpers';
 
 html {
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
+    font-size: $main-text-size;
 }
 
 *,
@@ -68,28 +70,13 @@ html {
     }
 }
 
-%main-section{
-    width:100%;
-    min-height:100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
 .projects{
     @extend %main-section;
     background-color: $dark-blue;
     clip-path: polygon(70% 0, 100% 10%, 100% 100%, 30% 100%, 0% 90%, 0% 0%);
     
     .projects__container{
-        display: flex;
-        max-width: 1200px;
-        margin: 200px 0;
-        min-height: 400px;
-        flex-flow: row wrap;
-        justify-content: center;
-        align-items: center;
-        justify-self: center;
-        align-self: center;
+        @include container;
     }
 }
 
@@ -98,12 +85,21 @@ html {
     background-color: $light-blue;
 
     .about__container{
-        @extend .projects__container;
-        background-color: red;
-        max-width: 500px;
-    
+        @include container;
+        min-height: 60vh;
+
         .container__aboutme{
             background-color: blue;
+            flex:1;
+            min-width: 390px;
+        }
+        
+        .container__myskills{
+            background-color: violet;
+            flex:1;
+            display: flex;
+            align-items: center;
+            min-width: 390px;
         }
     }    
 }

@@ -53,6 +53,7 @@
     border-radius: 40px;
     color: $light-blue;
     font-size: 40px;
+    font-weight: 700;
     margin-top: 40px;
     display: flex;
     flex-direction: row;
@@ -61,7 +62,7 @@
     height: 80px;
     left: 50%;
     transform: translateX(-50%);
-    box-shadow: -5px 5px 20px black, inset 0 0 20px rgb(85, 85, 85);
+    box-shadow: -5px 5px 20px black;
 
     .button__arrow{
         position: absolute;
@@ -75,4 +76,45 @@
     width: 390px;
     background-color: red;
     margin: 2px;
+}
+
+
+
+.skills-list{
+    display: flex;
+    align-items: center;
+    flex-flow: row wrap;
+}
+
+.skill{
+    display: flex;
+    flex: auto;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    background-color: $dark-red;
+    padding: 0 20px;
+    margin: 6px 3px;
+    height: 40px;
+    border-radius: 20px;
+}
+
+
+.skills-list__icon {
+    height: 1em;
+    width: 1em;
+    margin-right: 1em;
+}
+
+.skills-list__icon--img {
+}
+
+.skills-list__text{
+    margin-right: 1em;
+}
+
+.myphoto{
+    max-width: 300px;
+    max-height: 300px;
+    clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
 }
