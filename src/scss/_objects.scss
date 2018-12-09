@@ -48,10 +48,10 @@
 
 .button{
     position: relative;
-    background-color: rgba(252, 252, 252, 0.623);
+    // background-color: rgba(252, 252, 252, 0.623);
     border: none;
     border-radius: 40px;
-    color: $dark-blue;
+    color: $light-blue;
     font-size: 40px;
     margin-top: 40px;
     display: flex;
@@ -61,11 +61,17 @@
     height: 80px;
     left: 50%;
     transform: translateX(-50%);
-    box-shadow: -5px 5px 20px black;
+    box-shadow: -5px 5px 20px black, inset 0 0 20px rgb(85, 85, 85);
 
     .button__arrow{
         position: absolute;
         color: $dark-red;
         right: 40px;
     }
+}
+
+.container__project{
+    height: 200px;
+    width: 300px;
+    background-color: red;
 }
