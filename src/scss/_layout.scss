@@ -22,18 +22,14 @@ html {
     background-image: url(/src/images/background3.jpg);
     background-position: center;
     background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items:center; 
 }
 
 .hello{
-    // background-color: $background-transparent;
-    border-radius: 3px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     display: flex;
-    flex-direction: column;
-    padding: 3%;
+    flex-flow: column wrap;
     text-align: center;
 
     .hello__intro{
@@ -76,48 +72,56 @@ html {
     clip-path: polygon(0 0, 100% 5%, 100% 100%, 0% 95%);
     
     .projects__container{
-        @include container;
+        @extend %container;
+        flex-flow: row wrap;
+        max-width: 1200px;
     }
 }
 
 .about{
     @extend %main-section;
-    background-color: rgb(239, 249, 253);
-    // background-color: $light-blue;
 
     .about__container{
-        @include container;
-        min-height: 60vh;
+        @extend %container;
+        flex-flow: column wrap;
+        max-width: 1000px;
 
         .container__aboutme{
             background-color: rgb(230, 243, 255);
             flex:1;
             min-width: 390px;
             display: flex;
-            flex-flow: column wrap;
-            justify-content: space-evenly;
+            flex-flow: row wrap;
+            justify-content: center;
             align-items: center;
+            padding: 0 20px;
         }
         
         .container__myskills{
-            background-color: rgb(220, 238, 253);
+            background-color: rgb(226, 233, 238);
             flex:1;
             display: flex;
             align-items: center;
             min-width: 390px;
+            min-height: 300px;
+            padding: 0 40px;
         }
     }    
 }
 
 .contact{
-    @include main-section;
+    @extend %main-section;
     flex-direction: column;
 }
 
 .contact-background{
     background-color: $dark-blue;
-    height: 70vh;
+    min-height: 80vh;
     width:100%;
-    clip-path: polygon(0 10%, 50% 0, 100% 10%, 100% 100%, 50% 90%, 0% 100%)
+    clip-path: polygon(0 10%, 50% 0, 100% 10%, 100% 100%, 50% 90%, 0% 100%);
+}
+
+.footer{
+    color: $dark-blue;
 }
 
