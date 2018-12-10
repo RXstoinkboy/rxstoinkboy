@@ -1,10 +1,10 @@
-@import url('https://fonts.googleapis.com/css?family=Satisfy|Roboto|Charmonman|Lobster|Pacifico');
+@import url('https://fonts.googleapis.com/css?family=Oswald|Satisfy|Roboto|Charmonman|Lobster|Pacifico');
 @import 'variables';
 @import 'helpers';
 
 html {
     box-sizing: border-box;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Oswald', sans-serif;
     font-size: $main-text-size;
 }
 
@@ -73,7 +73,7 @@ html {
 .projects{
     @extend %main-section;
     background-color: $dark-blue;
-    clip-path: polygon(70% 0, 100% 10%, 100% 100%, 30% 100%, 0% 90%, 0% 0%);
+    clip-path: polygon(0 0, 100% 5%, 100% 100%, 0% 95%);
     
     .projects__container{
         @include container;
@@ -82,25 +82,42 @@ html {
 
 .about{
     @extend %main-section;
-    background-color: $light-blue;
+    background-color: rgb(239, 249, 253);
+    // background-color: $light-blue;
 
     .about__container{
         @include container;
         min-height: 60vh;
 
         .container__aboutme{
-            background-color: blue;
+            background-color: rgb(230, 243, 255);
             flex:1;
             min-width: 390px;
+            display: flex;
+            flex-flow: column wrap;
+            justify-content: space-evenly;
+            align-items: center;
         }
         
         .container__myskills{
-            background-color: violet;
+            background-color: rgb(220, 238, 253);
             flex:1;
             display: flex;
             align-items: center;
             min-width: 390px;
         }
     }    
+}
+
+.contact{
+    @include main-section;
+    flex-direction: column;
+}
+
+.contact-background{
+    background-color: $dark-blue;
+    height: 70vh;
+    width:100%;
+    clip-path: polygon(0 10%, 50% 0, 100% 10%, 100% 100%, 50% 90%, 0% 100%)
 }
 

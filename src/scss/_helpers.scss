@@ -6,6 +6,16 @@
     align-items: center;
 }
 
+@mixin main-section{
+    
+        width:100%;
+        min-height:100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    
+}
+
 @mixin container {
         display: flex;
         max-width: 1200px;
