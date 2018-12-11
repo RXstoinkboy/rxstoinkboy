@@ -35,9 +35,46 @@
     flex: 1;
     height: 100%;
     display: flex;
-    align-items: center;
+    position: relative;
     justify-content: center;
+    align-items: center;
     font-size: $main-text-size;
+    transition: all 0.3s ease;
+
+    &:hover{
+        background-color: $background-transparent-dark;
+        cursor: pointer;
+    }
+
+    &:hover .menu__icon{
+        // top: 10%;
+        opacity: 0;
+    }
+
+    &:hover .menu__text{
+        // top: 50%;
+        opacity: 1;
+    }
+
+}
+
+.menu__icon {
+    position: absolute;
+    font-size: 2em;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity:1;
+    transition: all 0.5s ease;
+}
+
+.menu__text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity:0;
+    transition: all 0.5s ease;
 }
 
 .media__icon{
@@ -50,6 +87,7 @@
     border: none;
     border-radius: 40px;
     color: $light-blue;
+    background-color: rgb(241, 241, 241);
     font-size: 40px;
     font-weight: 700;
     margin-top: 40px;
@@ -61,13 +99,21 @@
     width: 70%;
     left: 50%;
     transform: translateX(-50%);
-    box-shadow: -5px 5px 20px black;
+    box-shadow: -3px 3px 15px black, inset 0 0 3px black;
+    transition: all 0.3s ease;
+
+    &:hover{
+        box-shadow: -7px 10px 15px black, inset 0 0 0 black;
+        background-color: white;
+        cursor: pointer;
+        }
+    &:hover .button__arrow{
+        transform: rotate(90deg);
+    }
 
     .button__arrow{
-        color: $dark-red;
-    }
-    .button-text{
-
+        color: $dark-red;  
+        transition: all 0.3s ease;      
     }
 }
 
