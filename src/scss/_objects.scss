@@ -39,7 +39,7 @@
     justify-content: center;
     align-items: center;
     font-size: $main-text-size;
-    transition: all 0.3s ease;
+    transition: all 0.5s ease;
 
     &:hover{
         background-color: $background-transparent-dark;
@@ -47,12 +47,10 @@
     }
 
     &:hover .menu__icon{
-        // top: 10%;
         opacity: 0;
     }
 
     &:hover .menu__text{
-        // top: 50%;
         opacity: 1;
     }
 
@@ -80,23 +78,30 @@
 .media__icon{
     font-size: 1.5*$main-text-size;
     margin: 0 5px;
+    transition: all 0.3s ease;
+
+    &:hover{
+        text-shadow: -1px 2px 2px black;
+        color: rgb(177, 177, 177);
+        cursor: pointer;
+    }
 }
 
 .button{
     position: relative;
     border: none;
     border-radius: 40px;
-    color: $light-blue;
+    color: $dark-blue;
     background-color: rgb(241, 241, 241);
-    font-size: 40px;
+    font-size: 30px;
     font-weight: 700;
     margin-top: 40px;
-    padding: 20px;
+    max-width: 350px;
+    padding: 10px;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
-    width: 70%;
     left: 50%;
     transform: translateX(-50%);
     box-shadow: -3px 3px 15px black, inset 0 0 3px black;
@@ -104,22 +109,56 @@
 
     &:hover{
         box-shadow: -7px 10px 15px black, inset 0 0 0 black;
-        background-color: white;
-        cursor: pointer;
+        // background-color: white;
+        cursor: pointer; 
+        background-color: $dark-red;  
+       color: white; 
         }
     &:hover .button__arrow{
         transform: rotate(90deg);
+        color: white; 
     }
 
     .button__arrow{
-        color: $dark-red;  
-        transition: all 0.3s ease;      
+        color: $dark-blue;  
+        transition: all 0.3s ease;  
+        font-size: 1.5em;    
+    }
+}
+
+.back-button{
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    bottom: 40px;
+    right:40px;
+    opacity: 1;
+    width: 2em;
+    height:2em;
+    border-radius: 1.5em;
+    background-color: white;
+    box-shadow: -3px 3px 15px black, inset 0 0 3px black;
+    z-index: 11;
+    font-size: 2em;
+    transition: all 0.3s ease;
+
+    .back-button__arrow{
+       color: $dark-blue;     
+            
+    };
+
+    &:hover{
+        cursor: pointer;
+        box-shadow: -4px 5px 15px black, inset 0 0 0 black;
+        background-color: $dark-red;  
+       color: white; 
     }
 }
 
 .container__project{
     height: 300px;
-    width: 390px;
+    width: 350px;
     background-color: red;
     margin: 2px;
 }
@@ -133,23 +172,31 @@
 }
 
 .skill{
+    border: 3px solid $dark-red;
     display: flex;
     flex: auto;
     justify-content: center;
     align-items: center;
     list-style: none;
     background-color: $dark-red;
-    padding: 0 20px;
+    padding: 5px 20px;
     margin: 6px 3px;
-    height: 40px;
-    border-radius: 20px;
     color:white;
+    box-shadow: -1px 1px 3px black;
+    transition: all 0.3s ease;
+
+    &:hover{
+        background-color: white;
+        color: $dark-red;
+        box-shadow: -4px 5px 15px black;
+        cursor: pointer;
+    }
 }
 
 
 .skills-list__icon {
-    height: 1em;
-    width: 1em;
+    height: 2em;
+    // width: 1em;
     margin-right: 1em;
 }
 
@@ -161,17 +208,21 @@
 
 .myphoto{
     max-width: 250px;
-    clip-path: polygon(0% 0%, 85% 0%, 100% 100%, 15% 100%);
+    clip-path: circle(45%);
     margin: 0 20px;
 }
 
 .mystory{
     color: $dark-blue;
     text-align: justify;
-    white-space: pre-line;
+    // white-space: pre-line;
     margin: 0 20px;
     flex: 4;
     min-width: 250px;
+
+    p{
+        margin: 15px 0;
+    }
 
     .mystory__title{
         font-size: 2em;
@@ -193,8 +244,8 @@
         justify-content: center;
         align-items: center;
         width: 100%;
-        min-height: 30%;
-        clip-path: polygon(0 10%, 50% 0, 100% 10%, 100% 100%, 50% 90%, 0% 100%);
+        min-height: 40vh;
+        clip-path: polygon(0 20%, 50% 0, 100% 20%, 100% 100%, 50% 80%, 0% 100%);
         background-color: $light-blue;
 
         .contact__title{
@@ -203,10 +254,22 @@
 
         .contact__data{
             font-size: $main-text-size;
+            text-decoration: none;
+            color: $dark-blue;
         }
 
         .contact__icons{
             font-size: 0.5*$jumbo-text;
+            
+            .contact__icon{
+                transition: all 0.3s ease;
+            }
+
+            .contact__icon:hover{
+                color: white;
+                text-shadow: -1px 2px 2px black;
+                cursor: pointer;
+            }
         }
     }
 }
