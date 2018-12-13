@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Oswald|Satisfy|Roboto|Charmonman|Lobster|Pacifico');
+@import url('https://fonts.googleapis.com/css?family=Caveat|Oswald');
 @import 'variables';
 @import 'helpers';
 
@@ -39,13 +39,15 @@ html {
     }
 
     .hello__intro--red{
-        color: $dark-red;
+        color: $dark-blue;
+        text-shadow: -1px 2px 0 $light-blue;
     }
 
     .hello__intro--small {
-        font-family: satisfy;
+        font-family: caveat;
         font-size: 0.8*$jumbo-text;
-        color: $light-blue;
+        color: $dark-red;
+        text-shadow: -1px 2px 0 rgb(100, 10, 10);
     }
 }
 
