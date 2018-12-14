@@ -49,6 +49,16 @@ html {
         color: $dark-red;
         text-shadow: -1px 2px 0 rgb(100, 10, 10);
     }
+
+    @media all and (max-width: 500px){
+        .hello__intro{
+            font-size: 0.6*$jumbo-text;
+        }
+    
+        .hello__intro--small{
+            font-size: 0.5*$jumbo-text;
+        }
+    }
 }
 
 .content {
@@ -65,6 +75,16 @@ html {
         align-items: center;
         padding: 0 1%;
         z-index: 10;
+    }
+
+    @media all and(max-width: 1078px){
+        .nav {
+            display: none;
+        }
+    }
+
+    .display-menu{
+        display: none;
     }
 }
 
@@ -91,7 +111,6 @@ html {
         .container__aboutme{
             background-color: rgb(230, 243, 255);
             flex:1;
-            min-width: 390px;
             display: flex;
             flex-flow: row wrap;
             justify-content: center;
@@ -104,7 +123,6 @@ html {
             flex:1;
             display: flex;
             align-items: center;
-            min-width: 390px;
             min-height: 300px;
             padding: 0 40px;
         }
@@ -126,4 +144,3 @@ html {
 .footer{
     color: $dark-blue;
 }
-
