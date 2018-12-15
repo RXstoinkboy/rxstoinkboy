@@ -150,8 +150,6 @@
 
     }
 
-    ;
-
     &:hover {
         cursor: pointer;
         box-shadow: -3px 3px 15px -1px black, inset 0 0 0 black;
@@ -206,7 +204,7 @@
     }
 
     .project-watch--site {
-        background-image: url('/dist/images/website.png');
+        background-image: url('../images/website.png');
         left: -30px;
         transition: all 0.3s ease;
 
@@ -216,7 +214,7 @@
     }
 
     .project-watch--code {
-        background-image: url('/dist/images/octocat.png');
+        background-image: url('../images/octocat.png');
         right: -30px;
         transition: all 0.3s ease;
 
@@ -229,7 +227,7 @@
 .container__project {
     height: 300px;
     width: 350px;
-    background-image: url(/dist/images/background3-mod.jpg);
+    background-image: url('../images/background3-mod.jpg');
     background-position: center;
     background-size: cover;
     transform: scale(1.05);
