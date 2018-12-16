@@ -2,7 +2,7 @@
   "name": "devconfig",
   "version": "1.0.0",
   "description": "configuration file to automate dev process using npm scripts and webpack",
-  "main": "webpack.config.js",
+  "main": "./src/js/index.mjs",
   "scripts": {
     "sass": "node-sass --output-style compressed -o dist/css src/scss",
     "autoprefixer": "postcss -u autoprefixer -r dist/css/*",
@@ -39,6 +39,7 @@
   },
   "homepage": "https://github.com/RXstoinkboy/devConfiguration#readme",
   "devDependencies": {
+    "@babel/core": "^7.0.0",
     "autoprefixer": "^9.3.1",
     "babel-core": "^6.26.3",
     "babel-loader": "^8.0.4",

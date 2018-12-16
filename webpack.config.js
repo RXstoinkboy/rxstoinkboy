@@ -4,14 +4,14 @@ module.exports = {
   },
   output: {
     path: `${__dirname}/dist/js`,
-    filename: 'legacy-[name].mjs',
+    filename: 'legacy-[name].js',
   },
   watch: true,
   mode: 'development', // ta opcja zostanie pominięta jeżeli użyjemy npm run build
   devtool: 'source-map',
   module: {
     rules: [{
-      test: /\.js$/,
+      test: /\.mjs$/,
       exclude: /node_modules/,
       use: {
         loader: 'babel-loader',

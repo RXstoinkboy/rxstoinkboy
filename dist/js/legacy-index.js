@@ -97,7 +97,11 @@
 __webpack_require__.r(__webpack_exports__);
 
 
+var _mobileMenu = require("./mobile-menu.mjs");
+
+mobileMenu.addEventListener('click', _mobileMenu.toggleMobileMenu);
+
 /***/ })
 
 /******/ });
-//# sourceMappingURL=legacy-index.mjs.map
+//# sourceMappingURL=legacy-index.js.map
