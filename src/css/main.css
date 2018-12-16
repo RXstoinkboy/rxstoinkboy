@@ -188,7 +188,7 @@ html {
   border: none;
   border-radius: 40px;
   color: #00222b;
-  background-color: #f1f1f1;
+  background-color: rgba(255, 255, 255, 0.5);
   font-size: 30px;
   font-weight: 700;
   margin-top: 40px;
@@ -204,16 +204,14 @@ html {
   .button:hover {
     box-shadow: -3px 3px 15px -1px black, inset 0 0 0 black;
     cursor: pointer;
-    background-color: #961616;
-    color: white; }
+    background-color: rgba(255, 255, 255, 0.7); }
   .button .button__arrow {
     color: #00222b;
     transition: all 0.3s ease;
     font-size: 1.5em;
     margin: 0 20px; }
   .button:hover .button__arrow {
-    transform: rotate(90deg);
-    color: white; }
+    transform: rotate(90deg); }
 
 @media all and (max-width: 500px) {
   .button {
@@ -230,7 +228,7 @@ html {
   width: 2em;
   height: 2em;
   border-radius: 1.5em;
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.5);
   box-shadow: -3px 3px 10px black, inset 0 0 3px black;
   z-index: 11;
   font-size: 2em;
@@ -240,8 +238,7 @@ html {
   .back-button:hover {
     cursor: pointer;
     box-shadow: -3px 3px 15px -1px black, inset 0 0 0 black;
-    background-color: #961616;
-    color: white; }
+    background-color: rgba(255, 255, 255, 0.7); }
 
 .projects__container > div {
   overflow: hidden;
@@ -393,17 +390,19 @@ html {
   width: 80px;
   height: 80px;
   z-index: 40;
+  box-shadow: -3px 3px 10px black, inset 0 0 3px black;
   transition: all 0.3s ease; }
   .bars:hover {
     cursor: pointer;
-    background-color: rgba(255, 255, 255, 0.6); }
+    background-color: rgba(255, 255, 255, 0.7);
+    box-shadow: -3px 3px 15px -1px black, inset 0 0 0 black; }
 
 .bars__bar {
   position: absolute;
   top: 38px;
   width: 50%;
   height: 4px;
-  background-color: black;
+  background-color: #00222b;
   border-radius: 2px; }
 
 .bars__bar--0 {
@@ -463,3 +462,11 @@ html {
   display: flex;
   margin: 200px 0;
   justify-content: center; }
+
+.display-menu {
+  width: 95vw;
+  height: 95vw;
+  background-color: rgba(255, 0, 0, 0.281);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); }
