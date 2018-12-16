@@ -128,6 +128,12 @@
 
 }
 
+@media all and (max-width: 500px) {
+    .button {
+        font-size: 20px;
+    }
+}
+
 .back-button {
     position: fixed;
     display: flex;
@@ -232,8 +238,6 @@
     transform: scale(1.05);
     transition: all 0.3s ease;
 }
-
-
 
 .skills-list {
     display: flex;
@@ -350,55 +354,67 @@
     }
 }
 
-@media all and (max-width: 500px) {
-    .button {
-        font-size: 20px;
+.bars {
+    display: none;
+    position: fixed;
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 20px;
+    border-radius: 50%;
+    top: 20px;
+    right: 20px;
+    width: 80px;
+    height: 80px;
+    z-index: 40;
+    transition: all 0.3s ease;
+    &:hover{
+        cursor: pointer;
+        background-color: rgba(255, 255, 255, 0.6);
     }
 }
 
-.bars{
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    width: 40px;
-    height: 40px;
-    z-index: 20;
+.bars__bar{
+    position: absolute;
+    top: 38px;
+    width:50%;
+    height: 4px;
+    background-color: black;
+    border-radius: 2px;
+}
 
-    &:hover{
-        cursor: pointer;
+.bars__bar--0{
+    top: 23px;
+    transform: rotate(0);
+    transition: top 0.25s ease 0.25s, transform 0.25s ease 0s;
+}
+
+.bars__bar--0-active{
+    top: 38px;
+    transform: rotate(135deg);
+    transition: top 0.25s ease 0s, transform 0.25s ease 0.25s;
+}
+
+.bars__bar--1{
+    transform: scale(1);
+    transition: transform 0.5s ease;
+}
+
+.bars__bar--1-active{
+    transform: scale(0);
+}
+
+.bars__bar--2{
+    top:53px;
+    transition: top 0.25s ease 0.25s, transform 0.25s ease 0s;
+}
+
+.bars__bar--2-active{
+    top: 38px;
+    transform: rotate(45deg);
+    transition: top 0.25s ease 0s, transform 0.25s ease 0.25s;
+}
+
+@media all and(max-width: 1078px){
+    .bars {
+        display: block;
     }
-
-    // &:hover .bars__bar{
-    //     background-color: transparent;
-    // }
-
-    .bars__bar{
-        position: absolute;
-        width: 100%;
-        height:4px;
-        background-color: black;
-        border: 1px solid black;
-        border-radius: 2px;transition: all 0.3s ease;
-    }
-
-    .bars__bar--top{
-        top:5px;
-        transition: all 0.5s ease;
-        background-color: black;
-    }
-
-    .bars__bar--mid{
-        top:18px;
-    }
-
-    .bars__bar--bot{
-        bottom:5px;
-    }
-
-    .bars.bars--active .bars__bar{
-        top:5px;
-        transition: all 0.5s ease;
-        background-color: yellow;
-    }
-    
-}   
+}

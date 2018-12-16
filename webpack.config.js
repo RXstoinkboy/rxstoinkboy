@@ -1,6 +1,6 @@
 module.exports = {
   entry: {
-    index: './src/js/index.mjs',
+    index: './src/js/index.js',
   },
   output: {
     path: `${__dirname}/dist/js`,

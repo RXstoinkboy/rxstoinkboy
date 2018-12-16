@@ -81,25 +81,27 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = "./src/js/index.mjs");
+/******/ 	return __webpack_require__(__webpack_require__.s = "./src/js/index.js");
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ "./src/js/index.mjs":
-/*!**************************!*\
-  !*** ./src/js/index.mjs ***!
-  \**************************/
-/*! no exports provided */
-/***/ (function(__webpack_module__, __webpack_exports__, __webpack_require__) {
+/***/ "./src/js/index.js":
+/*!*************************!*\
+  !*** ./src/js/index.js ***!
+  \*************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
 
-"use strict";
-__webpack_require__.r(__webpack_exports__);
+const mobileMenu = document.querySelector('.bars');
 
+function toggleMobileMenu() {
+  console.log('działa2');
+  mobileMenu.classList.toggle('bars__bar--active');
+}
 
-var _mobileMenu = require("./mobile-menu.mjs");
+mobileMenu.addEventListener('click', toggleMobileMenu);
 
-mobileMenu.addEventListener('click', _mobileMenu.toggleMobileMenu);
 
 /***/ })
 
