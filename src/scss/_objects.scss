@@ -14,9 +14,7 @@
 }
 
 .nav__media {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @extend %flex-center;
     color: white;
 }
 
@@ -34,10 +32,8 @@
 .menu__item {
     flex: 1;
     height: 100%;
-    display: flex;
+    @extend %flex-center;
     position: relative;
-    justify-content: center;
-    align-items: center;
     font-size: $main-text-size;
     transition: all 0.5s ease;
 
@@ -92,7 +88,7 @@
     border: none;
     border-radius: 40px;
     color: $dark-blue;
-    background-color: rgba(255, 255, 255, 0.5);
+    background-color: $btn-color;
     font-size: 30px;
     font-weight: 700;
     margin-top: 40px;
@@ -109,8 +105,7 @@
     &:hover {
         box-shadow: -3px 3px 15px -1px black, inset 0 0 0 black;
         cursor: pointer;
-        background-color: rgba(255, 255, 255, 0.7);
-        // color: white;
+        background-color: $btn-color-active;
     }
 
     .button__arrow {
@@ -122,7 +117,6 @@
 
     &:hover .button__arrow {
         transform: rotate(90deg);
-        // color: white;
     }
 
 
@@ -136,16 +130,14 @@
 
 .back-button {
     position: fixed;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @extend %flex-center;
     bottom: 20px;
     right: 20px;
     opacity: 1;
     width: 2em;
     height: 2em;
     border-radius: 1.5em;
-    background-color: rgba(255, 255, 255, 0.5);
+    background-color: $btn-color;
     box-shadow: -3px 3px 10px black, inset 0 0 3px black;
     z-index: 11;
     font-size: 2em;
@@ -158,7 +150,7 @@
     &:hover {
         cursor: pointer;
         box-shadow: -3px 3px 15px -1px black, inset 0 0 0 black;
-        background-color: rgba(255, 255, 255, 0.7);
+        background-color: $btn-color-active;
     }
 
     &:hover .back-button__arrow{
@@ -232,9 +224,14 @@
     }
 }
 
+.projects__container>div{
+    max-width: 320px;
+    overflow: hidden;
+}
+
 .container__project {
     height: 300px;
-    width: 350px;
+    width: 320px;
     background-image: url('../images/background3-mod.jpg');
     background-position: center;
     background-size: cover;
@@ -250,10 +247,8 @@
 
 .skill {
     border: 3px solid $dark-red;
-    display: flex;
+    @extend %flex-center;
     flex: auto;
-    justify-content: center;
-    align-items: center;
     list-style: none;
     background-color: $dark-red;
     padding: 5px 20px;
@@ -309,17 +304,13 @@
 }
 
 .contact {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @extend %flex-center;
 
     .contact__form {
         color: $dark-blue;
         position: absolute;
-        display: flex;
+        @extend %flex-center;
         flex-flow: column wrap;
-        justify-content: center;
-        align-items: center;
         width: 100%;
         min-height: 40vh;
         clip-path: polygon(0 20%, 50% 0, 100% 20%, 100% 100%, 50% 80%, 0% 100%);
@@ -329,7 +320,12 @@
             font-size: $jumbo-text;
         }
 
-        @media all and (max-width:500px) {
+        @media all and (max-width:500px){
+            .contact__title {
+                font-size: 0.6*$jumbo-text;
+            }
+        }
+        @media all and (orientation: landscape){
             .contact__title {
                 font-size: 0.6*$jumbo-text;
             }
@@ -360,7 +356,7 @@
 .bars {
     display: none;
     position: fixed;
-    background-color: rgba(255, 255, 255, 0.5);
+    background-color: $btn-color;
     padding: 20px;
     border-radius: 50%;
     top: 20px;
@@ -372,7 +368,7 @@
     transition: all 0.3s ease;
     &:hover{
         cursor: pointer;
-        background-color: rgba(255, 255, 255, 0.7);
+        background-color: $btn-color-active;
         box-shadow: -3px 3px 15px -1px black, inset 0 0 0 black;
     }
 }
