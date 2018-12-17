@@ -11,7 +11,7 @@
   margin: 200px 0;
   justify-content: center; }
 
-.header, .hello, .about .about__container .container__aboutme, .nav__media, .menu__item, .back-button, .skill, .contact, .contact .contact__form {
+.header, .hello, .about .about__container .container__aboutme, .nav__media, .menu__item, .back-button, .skill, .contact, .contact .contact__form, .display-menu {
   display: flex;
   justify-content: center;
   align-items: center; }
@@ -447,15 +447,18 @@ html {
   margin: 200px 0;
   justify-content: center; }
 
-.header, .hello, .about .about__container .container__aboutme, .nav__media, .menu__item, .back-button, .skill, .contact, .contact .contact__form {
+.header, .hello, .about .about__container .container__aboutme, .nav__media, .menu__item, .back-button, .skill, .contact, .contact .contact__form, .display-menu {
   display: flex;
   justify-content: center;
   align-items: center; }
 
 .display-menu {
-  width: 95vw;
-  height: 95vw;
-  background-color: rgba(255, 0, 0, 0.281);
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%); }
+  display: inline-block;
+  position: fixed;
+  opacity: 1;
+  width: 20em;
+  height: 20em;
+  background-color: red;
+  z-index: 90;
+  font-size: 2em;
+  transition: all 0.3s ease; }
