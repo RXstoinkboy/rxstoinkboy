@@ -1,12 +1,98 @@
-.display-menu{
-    display: inline-block;
-    position: fixed;
-    @extend %flex-center;
-    opacity: 1;
-    width: 20em;
-    height: 20em;
-    background-color: red;
-    z-index: 90;
-    font-size: 2em;
-    transition: all 0.3s ease;
+@import 'variables';
+
+.mobile-button{
+    display: none;
+	position: fixed;
+	width: 60px;
+	height: 60px;
+	border-radius: 50%;
+	top: 20px;
+	right: 20px;
+	z-index: 100;
+	background-color: $btn-color;
+	transition: all 0.3s ease;
+	
+	&:hover{
+        cursor: pointer;
+        box-shadow: -3px 3px 15px -1px black, inset 0 0 0 black;
+		background-color: $btn-color-active;
+	}
+}
+
+.mobile-button__top, .mobile-button__mid, .mobile-button__bot{
+    position: absolute;
+	width: 30px;
+	height: 3px;
+	background-color: $dark-blue;
+	left: 25%;
+	top: 50%;
+	border-radius: 1.5px;
+	transition: all 0.5s ease;
+}
+
+.mobile-button__top{
+	transform: translateY(-10px);
+}
+
+.mobile-button__mid{
+	opacity: 1;
+}
+
+.mobile-button__bot{
+	transform: translatey(10px);
+}
+
+.mobile-button.mobile-button--active .mobile-button__top{
+	transform: rotate(-45deg);
+}
+
+.mobile-button.mobile-button--active .mobile-button__mid{
+	opacity:0;
+	right: 10%;
+}
+
+.mobile-button.mobile-button--active .mobile-button__bot{
+	transform: rotate(45deg);
+}
+
+.mobileMenu{
+	position: fixed;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+    text-align: center;
+    top: 0;
+    left:0;
+	width: 100vw;
+	height: 100vh;
+	background-color: rgba(0,0,0,0.95);
+	transform: scaley(0);
+	opacity: 0;
+    transform-origin: top;
+    z-index:90;
+	transition: all 0.3s ease;
+	
+	.list__item{
+		list-style:none;
+		font-size: 35px;
+		font-family: 'Oswald', sans-serif;
+		margin: 10px;
+		color: white;
+		
+		&:hover{
+			cursor: pointer;
+			color: rgba(255, 255, 255, 0.7);
+		}
+	}
+}
+
+.mobileMenu--active{
+	transform: scaley(1);
+	opacity:1;
+}
+
+@media all and(max-width: 1078px){
+    .mobile-button {
+        display: block;
+    }
 }
