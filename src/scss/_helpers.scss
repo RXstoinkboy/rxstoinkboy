@@ -1,14 +1,15 @@
 %main-section{
     width:100%;
     min-height:100vh;
-    display: flex;
+    display: flex;    
     justify-content: center;
     align-items: center;
+    flex-flow: column nowrap;
 }
 
 %container {
         display: flex;
-        margin: 200px 0;
+        margin-bottom: 200px;
         justify-content: center;
 }
 
@@ -16,4 +17,15 @@
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+@mixin hide {
+    opacity: 0;
+    transform: translateX(-70px);
+    transition: all 1s ease-in-out;
+}
+
+@mixin show {
+    opacity:1;
+    transform: translateX(0);
 }

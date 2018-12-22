@@ -39,14 +39,11 @@ body.loading{
         font-size: $jumbo-text;
         color: $dark-blue;
         text-shadow: -1px 2px 0 $light-blue;
-        opacity: 0;
-        transform: translateX(-70px);
-        transition: all 1s ease-in-out;
+        @include hide;
     }
 
     .hello__intro--active{
-        opacity:1;
-        transform: translateX(0);
+        @include show;
     }
 
     .hello__intro--name{
@@ -107,6 +104,26 @@ body.loading{
     .display-menu{
         display: none;
     }
+}
+
+.title{
+    margin: 140px 0 15px 0;
+    color: $light-blue;
+    text-shadow: -1px 2px 0 $dark-blue;
+    font-size: 2em;
+    border-bottom: 2px solid $light-blue;
+    @include hide;
+}
+
+.title--dark{
+    color: $dark-blue;
+    text-shadow: -1px 2px 0 $light-blue;
+    font-size: 2em;
+    border-bottom: 2px solid $dark-blue;
+}
+
+.title--active{
+    @include show;
 }
 
 .projects{
