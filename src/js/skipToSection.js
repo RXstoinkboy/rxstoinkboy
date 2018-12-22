@@ -21,4 +21,12 @@ export function skipToSection(e) {
       behavior: 'smooth', block: 'start',
     });
   }
+
+  // close menu if it is mobileMenu
+  if (this.className === 'list__item') {
+    const mobileMenuButton = document.querySelector('.mobile-button');
+    const mobileMenu = document.querySelector('.mobileMenu');
+    mobileMenuButton.classList.toggle('mobile-button--active');
+    mobileMenu.classList.toggle('mobileMenu--active');
+  }
 }

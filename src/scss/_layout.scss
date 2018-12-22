@@ -16,12 +16,18 @@ html {
     padding: 0;
 }
 
+// prevent scrolling while loading
+body.loading{
+    overflow: hidden;
+}
+
 .header {
     width: 100%;
     height: 100vh;
-    background-image: url('../images/bike-wheel.jpg');
-    background-position: center;
-    background-size: cover;
+    // background-image: url('../images/bike-wheel.jpg');
+    // background-position: center;
+    // background-size: cover;
+    background: linear-gradient(to bottom, rgba(27, 51, 65, 0.301), white);
     @extend %flex-center;
 }
 
@@ -31,20 +37,28 @@ html {
 
     .hello__intro{
         font-size: $jumbo-text;
-        color: $light-blue;
-        text-shadow: -1px 2px 0 $dark-blue;
-    }
-
-    .hello__intro--red{
         color: $dark-blue;
         text-shadow: -1px 2px 0 $light-blue;
+        opacity: 0;
+        transform: translateX(-70px);
+        transition: all 1s ease-in-out;
+    }
+
+    .hello__intro--active{
+        opacity:1;
+        transform: translateX(0);
+    }
+
+    .hello__intro--name{
+        color: $light-blue;
+        text-shadow: -1px 2px 0 $dark-blue;
     }
 
     .hello__intro--small {
         font-family: caveat;
         font-size: 0.8*$jumbo-text;
-        color: $dark-red;
-        text-shadow: -1px 2px 0 rgb(100, 10, 10);
+        color: $dark-blue;
+        text-shadow: -1px 2px 0 $light-blue;
     }
 
     @media all and (max-width: 500px){
@@ -64,9 +78,12 @@ html {
     
     .nav {
         height: 7vh;
+        transform: scaley(0);
+        transform-origin: top;
         width: 100%;
-        background-color: $dark-red;
+        background-color: $background-transparent;
         position: absolute;
+        border-bottom: 2px solid $light-blue;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -77,7 +94,7 @@ html {
 
     .nav--active{
         position: fixed;
-        background-color: $background-transparent;
+        transform: scaley(1);
         top: 0;
     }
 

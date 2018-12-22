@@ -12,16 +12,16 @@
       crossorigin="anonymous">
 </head>
 
-<body>
-   <!-- <div class="loading-screen noscroll">
+<body class="loading">
+   <div class="loading-screen">
       <img class="loading-screen__logo" src="/src/images/logoRX.svg" alt="RX logo">
-   </div> -->
+   </div>
 
    <!-- first page (homepage) STARTS here -->
    <header class='header'>
 
       <section class="hello">
-         <h1 class="hello__intro">Hello, I'm <span class='hello__intro--red'>Eryk Ludwin</span></h1>
+         <h1 class="hello__intro">Hello, I'm <span class='hello__intro hello__intro--name'>Eryk Ludwin</span></h1>
          <h2 class="hello__intro hello__intro--small">I'm a Front-End Developer</h2>
          <button class="button">
             <div class="button__text">View my work</div>
@@ -74,10 +74,11 @@
 
       <nav class="mobileMenu">
          <ul class="list">
-            <li class="list__item list__item1">HOME</li>
-            <li class="list__item list__item1">PROJECT</li>
-            <li class="list__item list__item1">ABOUT</li>
-            <li class="list__item list__item1">CONTACT</li>
+            <li class="list__item" data-nav='header'>HOME</li>
+            <li class="list__item" data-nav='projects'>PROJECT</li>
+            <li class="list__item" data-nav='about'>ABOUT</li>
+            <li class="list__item" data-nav='contact'>CONTACT</li>
+            <li class="list__item">RESUME</li>
          </ul>
       </nav>
 
