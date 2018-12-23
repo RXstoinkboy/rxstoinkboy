@@ -49,7 +49,7 @@ window.addEventListener('DOMContentLoaded', () => {
   backButton.addEventListener('click', scrollBack);
   window.addEventListener('scroll', _.debounce(displayBackButton, 50));
   window.addEventListener('scroll', _.debounce(navState, 10));
-  window.addEventListener('scroll', _.debounce(stateOnScroll, 30));
+  window.addEventListener('scroll', _.debounce(stateOnScroll, 20));
   helloButton.addEventListener('click', pageDown);
   navList.forEach(item => item.addEventListener('click', skipToSection));
   mobileNav.forEach(item => item.addEventListener('click', skipToSection));
