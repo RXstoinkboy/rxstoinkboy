@@ -167,12 +167,14 @@
     }
 }
 
-.projects__container>div {
+.project {
     overflow: hidden;
     margin: 2px;
     position: relative;
     box-shadow: 0 0 0 black;
-    transition: all 0.3s ease;
+    transition: all 0.5s ease;
+    opacity: 0;
+    transform: translateY(5%) scale(.95);
 
     &:hover {
         box-shadow: -1px 3px 15px black;
@@ -254,6 +256,11 @@
             opacity: 1;
         }
     }
+}
+
+.project--active{
+    opacity: 1;
+    transform: translateY(0%) scale(1);
 }
 
 .projects__container>div{
