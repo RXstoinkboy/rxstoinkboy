@@ -283,15 +283,28 @@
 
     .details__min-img {
         position: absolute;
-        height: 50%;
+        height: 40%;
         left: 50%;
         transform: translateX(-50%);
     }
 
     .details__info {
         position: absolute;
-        top: 50%;
+        top: 40%;
         margin: 10px;
+    }
+
+    .datails__git{
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        bottom: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 21;
+        background-image: url('/dist/images/github.png');
+        background-position: center;
+        background-size: cover;
     }
 }
 
@@ -302,7 +315,7 @@
 .container__project {
     height: 300px;
     width: 300px;
-    background-image: url('../images/background3-mod.jpg');
+    background-image: url('/dist/images/background3-mod.jpg');
     background-position: center;
     background-size: cover;
     transform: scale(1.05);
@@ -402,6 +415,9 @@
             font-size: $main-text-size;
             text-decoration: none;
             color: $dark-blue;
+        }
+        a:visited{
+            color: white;
         }
 
         .contact__icons {

@@ -29,6 +29,9 @@ html {
   margin: 0;
   padding: 0; }
 
+a:visited {
+  color: white; }
+
 body.loading {
   overflow: hidden; }
 
@@ -156,6 +159,8 @@ body.loading {
 
 .footer {
   color: #00222b; }
+  .footer a:visited {
+    color: #00222b; }
 
 .logo-main {
   position: absolute;
@@ -376,13 +381,24 @@ body.loading {
         background-color: rgba(255, 255, 255, 0.85); } }
   .details .details__min-img {
     position: absolute;
-    height: 50%;
+    height: 40%;
     left: 50%;
     transform: translateX(-50%); }
   .details .details__info {
     position: absolute;
-    top: 50%;
+    top: 40%;
     margin: 10px; }
+  .details .datails__git {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 21;
+    background-image: url("/dist/images/github.png");
+    background-position: center;
+    background-size: cover; }
 
 .details--active {
   display: block; }
@@ -390,7 +406,7 @@ body.loading {
 .container__project {
   height: 300px;
   width: 300px;
-  background-image: url("../images/background3-mod.jpg");
+  background-image: url("/dist/images/background3-mod.jpg");
   background-position: center;
   background-size: cover;
   transform: scale(1.05);
@@ -463,6 +479,8 @@ body.loading {
     font-size: 16px;
     text-decoration: none;
     color: #00222b; }
+  .contact .contact__form a:visited {
+    color: white; }
   .contact .contact__form .contact__icons {
     font-size: 35px; }
     .contact .contact__form .contact__icons .contact__icon {
