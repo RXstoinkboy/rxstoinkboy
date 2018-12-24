@@ -14,7 +14,7 @@
 
 <body class="loading">
    <div class="loading-screen">
-      <img class="loading-screen__logo" src="/src/images/logoRX.svg" alt="RX logo">
+      <img class="loading-screen__logo" src="./dist/images/logoRX.svg" alt="RX logo">
    </div>
 
    <!-- first page (homepage) STARTS here -->
@@ -42,8 +42,10 @@
                <i class="menu__icon fas fa-home"></i>
                <span class="menu__text">HOME</span>
             </li>
-            <li class="menu__item" data-nav='projects'><i class="menu__icon fas fa-laptop-code"></i><span class="menu__text" data-nav='projects'>PORTFOLIO</span></li>
-            <li class="menu__item" data-nav='about'><i class="menu__icon fas fa-user-tie"></i><span class="menu__text" data-nav='about'>ABOUT ME</span></li>
+            <li class="menu__item" data-nav='projects'><i class="menu__icon fas fa-laptop-code"></i><span class="menu__text"
+                  data-nav='projects'>PORTFOLIO</span></li>
+            <li class="menu__item" data-nav='about'><i class="menu__icon fas fa-user-tie"></i><span class="menu__text"
+                  data-nav='about'>ABOUT ME</span></li>
             <li class="menu__item" data-nav='contact'><i class="menu__icon fas fa-envelope"></i><span class="menu__text">CONTACT</span></li>
             <li class="menu__item"><i class="menu__icon fas fa-file"></i><span class="menu__text">RESUME</span></li>
          </ul>
@@ -92,51 +94,53 @@
       </div>
       <!-- back button satrts here -->
 
+<!-- popup window with info about project -->
+
+<div class="details">
+      <span class="details__close">CLOSE</span>
+      <img class="details__min-img" src="./dist/images/background3-mod.jpg">
+      <article class="details__info">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos
+         maxime dolor ex, debitis reiciendis impedit cupiditate natus? Dolorem, accusamus sint quisquam dicta,
+         accusantium labore provident alias natus deserunt quia facere nisi iusto? Aperiam odit, similique
+         adipisci assumenda dignissimos iusto, tempora dolorum debitis excepturi ad at, a voluptatibus.
+         Laborum, accusamus repellat.</article>
+   </div>
+
+   <!-- end of popup code -->
+
       <!-- projects section STARTS here -->
       <section class="projects">
          <h2 class="title">My projects</h2>
          <div class="projects__container">
             <div class="project">
-               <div class="container__project">
-
-               </div>
-               <span class="project-watch project-watch--site"><span class="project__text">VIEW</span></span>
-               <span class="project-watch project-watch--code"><span class="project__text">CODE</span></span>
+               <div class="container__project"></div>
+               <span class="project__text">LOREM IPSUM</span>
+               <span class="project__watch">SEE MORE</span>
             </div>
             <div class="project">
-               <div class="container__project">
-
-               </div>
-               <span class="project-watch project-watch--site"><span class="project__text">VIEW</span></span>
-               <span class="project-watch project-watch--code"><span class="project__text">CODE</span></span>
+               <div class="container__project"></div>
+               <span class="project__text">LOREM IPSUM</span>
+               <span class="project__watch">SEE MORE</span>
             </div>
             <div class="project">
-               <div class="container__project">
-
-               </div>
-               <span class="project-watch project-watch--site"><span class="project__text">VIEW</span></span>
-               <span class="project-watch project-watch--code"><span class="project__text">CODE</span></span>
+               <div class="container__project"></div>
+               <span class="project__text">LOREM IPSUM</span>
+               <span class="project__watch">SEE MORE</span>
             </div>
             <div class="project">
-               <div class="container__project">
-
-               </div>
-               <span class="project-watch project-watch--site"><span class="project__text">VIEW</span></span>
-               <span class="project-watch project-watch--code"><span class="project__text">CODE</span></span>
+               <div class="container__project"></div>
+               <span class="project__text">LOREM IPSUM</span>
+               <span class="project__watch">SEE MORE</span>
             </div>
             <div class="project">
-               <div class="container__project">
-
-               </div>
-               <span class="project-watch project-watch--site"><span class="project__text">VIEW</span></span>
-               <span class="project-watch project-watch--code"><span class="project__text">CODE</span></span>
+               <div class="container__project"></div>
+               <span class="project__text">LOREM IPSUM</span>
+               <span class="project__watch">SEE MORE</span>
             </div>
             <div class="project">
-               <div class="container__project">
-
-               </div>
-               <span class="project-watch project-watch--site"><span class="project__text">VIEW</span></span>
-               <span class="project-watch project-watch--code"><span class="project__text">CODE</span></span>
+               <div class="container__project"></div>
+               <span class="project__text">LOREM IPSUM</span>
+               <span class="project__watch">SEE MORE</span>
             </div>
          </div>
 
@@ -145,18 +149,19 @@
 
       <!-- about sections STARTS here -->
       <section class="about">
-            <h2 class="title title--dark">About me</h2>
+         <h2 class="title title--dark">About me</h2>
          <section class="about__container">
 
             <!-- left side -->
-            <div class="container__aboutme">
+            <div class="about__element container__aboutme">
                <div class="photo-container">
                   <img src="./dist/images/profile2.JPG" alt="my photo" class="myphoto">
                </div>
                <article class="mystory">
                   <p class="mystory__title">Hello, I'm Eryk</p>
                   <p>I am a self-though Front-End developer. I am passionate about JavaScript and it's libraries. I
-                     also really like to make some cool effects with CSS. I am actively improving my knowledge in order to be more reliable and capable in back-end development.</p>
+                     also really like to make some cool effects with CSS. I am actively improving my knowledge in order
+                     to be more reliable and capable in back-end development.</p>
                   <p>As for my free time, I divide it between my beloved family and my hobbies. I love cycling
                      (+disasambling and repairing bikes), hiking and reading books.</p>
                </article>
@@ -164,7 +169,7 @@
             </div>
 
             <!-- right side -->
-            <article class="container__myskills">
+            <article class="about__element container__myskills">
                <ul class="skills-list">
                   <li class="skill"><img src="./dist/images/html.png" alt="HTML5 icon" class="skills-list__icon skills-list__icon--img"><span
                         class="skills-list__text">Semantic
@@ -239,8 +244,8 @@
    </section>
 
    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.11/lodash.min.js"></script>
-<script type='module' src="src/js/index.js"></script>
-<!-- <script nomodule src="dist/js/legacy-index.js"></script> -->
+   <script type='module' src="src/js/index.js"></script>
+   <!-- <script nomodule src="dist/js/legacy-index.js"></script> -->
 
 </body>
 

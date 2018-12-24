@@ -3,6 +3,7 @@ import { pageDown } from './pageDown.js';
 import { skipToSection } from './skipToSection.js';
 import { endLoading } from './loadingScreen.js';
 import { stateOnScroll } from './stateOnScroll.js';
+import { handleMobile } from './projectsMobile.js';
 
 window.addEventListener('DOMContentLoaded', () => {
   // DOM elements
@@ -13,6 +14,7 @@ window.addEventListener('DOMContentLoaded', () => {
   const nav = document.querySelector('.nav');
   const navList = document.querySelectorAll('.menu__item');
   const mobileNav = document.querySelectorAll('.list__item');
+  const projectWatch = document.querySelectorAll('.project__watch');
 
   // display menu
 
@@ -54,4 +56,5 @@ window.addEventListener('DOMContentLoaded', () => {
   navList.forEach(item => item.addEventListener('click', skipToSection));
   mobileNav.forEach(item => item.addEventListener('click', skipToSection));
   window.addEventListener('load', endLoading);
+  projectWatch.forEach(item => item.addEventListener('click', handleMobile));
 });

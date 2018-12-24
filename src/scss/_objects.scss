@@ -103,7 +103,7 @@
     padding-left: 20px;
     @include hide;
 
-    &:focus{
+    &:focus {
         outline: none;
     }
 
@@ -113,7 +113,7 @@
         background-color: $btn-color-active;
     }
 
-    &.button--active{
+    &.button--active {
         @include show;
     }
 
@@ -146,7 +146,7 @@
     width: 60px;
     height: 60px;
     border-radius: 50%;
-	z-index: 100;
+    z-index: 100;
     background-color: $btn-color;
     border: 2px solid $dark-blue;
     font-size: 30px;
@@ -161,10 +161,6 @@
         box-shadow: -3px 3px 15px -1px black, inset 0 0 0 black;
         background-color: $btn-color-active;
     }
-
-    &:hover .back-button__arrow{
-        // color: white;
-    }
 }
 
 .project {
@@ -174,103 +170,138 @@
     box-shadow: 0 0 0 black;
     transition: all 0.5s ease;
     opacity: 0;
-    transform: translateY(5%) scale(.95);
+    transform: translateY(5%);
 
-    &:hover {
-        box-shadow: -1px 3px 15px black;
-        transform: translateY(-4px) scale(1.01);
+    &:hover .project__text {
+        bottom: 60%;
+        opacity: 1;
     }
 
-    &:hover .container__project {
-        filter: blur(5px);
-    }
-
-    &:hover .project-watch--code {
-        right: 50px;
+    &:hover .project__watch {
+        top: 60%;
         opacity: 1;
         cursor: pointer;
     }
 
-    &:hover .project-watch--site {
-        left: 50px;
-        opacity: 1;
-        cursor: pointer;
+    @media screen and (min-width: 1078px) {
+        &:hover {
+            box-shadow: -1px 3px 15px black;
+        }
+
+        &:hover .container__project {
+            filter: blur(3px);
+        }
     }
 
-    .project-watch {
-        width: 100px;
-        height: 100px;
-        border: 1px solid $light-blue;
-        border-radius: 50%;
-        background-color: rgba(255, 255, 255, 0.103);
+
+    .project__watch {
+        width: 200px;
+        height: 50px;
+        border-radius: 25px;
         background-position: center;
         background-size: cover;
         background-repeat: no-repeat;
         background-size: 60%;
         position: absolute;
         z-index: 10;
-        top: 50%;
+        top: 80%;
+        left: 50%;
         opacity: 0;
-        transform: translateY(-50%);
-
-        .project__text {
-            position: absolute;
-            top: 100px;
-            left: 50%;
-            opacity: 0;
-            text-align: center;
-            transform: translate(-50%, -50%);
-            transition: all 0.5s ease;
-            color: $dark-blue;
-        }
-    }
-
-    .project-watch--site {
-        background-image: url('../images/website.png');
-        left: -30px;
+        @extend %flex-center;
+        transform: translateX(-50%);
+        color: $dark-blue;
+        background-color: $btn-color;
+        border: 2px solid $dark-blue;
         transition: all 0.3s ease;
 
         &:hover {
-            background-color: rgba(255, 255, 255, 0.3);
-            background-position-y: -100px;
-        }
-
-        &:hover .project__text{
-            top: 50%;
-            opacity: 1;
+            box-shadow: -3px 3px 15px -1px black, inset 0 0 0 black;
+            cursor: pointer;
+            background-color: $btn-color-active;
         }
     }
 
-    .project-watch--code {
-        background-image: url('../images/octocat.png');
-        right: -30px;
-        transition: all 0.3s ease;
-
-        &:hover {
-            background-color: rgba(255, 255, 255, 0.3);
-            background-position-y: -100px;
-        }
-
-        &:hover .project__text{
-            top: 50%;
-            opacity: 1;
-        }
+    .project__text {
+        position: absolute;
+        z-index: 10;
+        bottom: 40%;
+        left: 50%;
+        opacity: 0;
+        transform: translateX(-50%);
+        color: $dark-blue;
+        transition: all 0.4s ease 0.1s;
     }
 }
 
-.project--active{
+.project--active {
     opacity: 1;
-    transform: translateY(0%) scale(1);
+    transform: translateY(0%);
 }
 
-.projects__container>div{
+.projects__container>div {
     max-width: 320px;
     overflow: hidden;
 }
 
+.details {
+    background-color: rgba(255, 255, 255, 0.90);
+    width: 80vw;
+    height: 60vh;
+    position: fixed;
+    top:20vh;
+    left: 10vw;
+    z-index: 200;
+    padding: 10px 0;
+    overflow: hidden;
+    display: none;
+    border: 2px solid $light-blue;
+
+    @media screen and (max-width: 776px) {
+        top:0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+    }
+
+    .details__close {
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding: 5px;
+        z-index: 21;
+        background-color: $btn-color;
+
+        &:hover {
+            background-color: $btn-color-active;
+            cursor: pointer;
+        }
+
+        @media screen and (max-width: 776px) {
+            background-color: $btn-color-active;
+        }
+    }
+
+    .details__min-img {
+        position: absolute;
+        height: 50%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .details__info {
+        position: absolute;
+        top: 50%;
+        margin: 10px;
+    }
+}
+
+.details--active{
+    display: block;
+}
+
 .container__project {
     height: 300px;
-    width: 320px;
+    width: 300px;
     background-image: url('../images/background3-mod.jpg');
     background-position: center;
     background-size: cover;
@@ -307,16 +338,12 @@
 
 .skills-list__icon {
     height: 2em;
-    // width: 1em;
     margin-right: 1em;
 }
 
 .skills-list__text {
     margin-right: 1em;
 }
-
-.photo-container {}
-
 .myphoto {
     max-width: 250px;
     clip-path: circle(45%);
@@ -359,12 +386,13 @@
             font-size: $jumbo-text;
         }
 
-        @media all and (max-width:500px){
+        @media all and (max-width:500px) {
             .contact__title {
                 font-size: 0.6*$jumbo-text;
             }
         }
-        @media all and (orientation: landscape){
+
+        @media all and (orientation: landscape) {
             .contact__title {
                 font-size: 0.6*$jumbo-text;
             }
@@ -391,4 +419,3 @@
         }
     }
 }
-
