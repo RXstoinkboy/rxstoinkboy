@@ -302,7 +302,7 @@
         left: 50%;
         transform: translateX(-50%);
         z-index: 21;
-        background-image: url('/dist/images/github.png');
+        background-image: url('../images/github.png');
         background-position: center;
         background-size: cover;
     }
@@ -315,7 +315,7 @@
 .container__project {
     height: 300px;
     width: 300px;
-    background-image: url('/dist/images/background3-mod.jpg');
+    background-image: url('../images/background3-mod.jpg');
     background-position: center;
     background-size: cover;
     transform: scale(1.05);
@@ -416,8 +416,9 @@
             text-decoration: none;
             color: $dark-blue;
         }
+
         a:visited{
-            color: white;
+            color: $dark-blue;
         }
 
         .contact__icons {

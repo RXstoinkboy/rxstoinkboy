@@ -396,7 +396,7 @@ body.loading {
     left: 50%;
     transform: translateX(-50%);
     z-index: 21;
-    background-image: url("/dist/images/github.png");
+    background-image: url("../images/github.png");
     background-position: center;
     background-size: cover; }
 
@@ -406,7 +406,7 @@ body.loading {
 .container__project {
   height: 300px;
   width: 300px;
-  background-image: url("/dist/images/background3-mod.jpg");
+  background-image: url("../images/background3-mod.jpg");
   background-position: center;
   background-size: cover;
   transform: scale(1.05);
@@ -480,7 +480,7 @@ body.loading {
     text-decoration: none;
     color: #00222b; }
   .contact .contact__form a:visited {
-    color: white; }
+    color: #00222b; }
   .contact .contact__form .contact__icons {
     font-size: 35px; }
     .contact .contact__form .contact__icons .contact__icon {
