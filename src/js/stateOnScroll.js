@@ -5,7 +5,6 @@ export function stateOnScroll() {
   const aboutEls = about.querySelectorAll('.about__element');
 
   titles.forEach((title) => {
-
     // half way through the item
     const itemMidY = (window.scrollY + window.innerHeight) - title.getBoundingClientRect().height / 2;
     // bottom of the item
@@ -35,6 +34,7 @@ export function stateOnScroll() {
     }
   });
 
+
   aboutEls.forEach((aboutItem) => {
     const itemMidY = (window.scrollY + window.innerHeight) - aboutItem.getBoundingClientRect().height / 2;
     // bottom of the item
@@ -46,5 +46,4 @@ export function stateOnScroll() {
       aboutItem.classList.add('about__element--active');
     }
   });
-
 }
