@@ -435,4 +435,10 @@
             }
         }
     }
+
+    @media (orientation: landscape){
+        .contact__form {
+            clip-path: none;
+        }
+    }
 }

@@ -188,6 +188,12 @@ body.loading{
     clip-path: polygon(0 10%, 50% 0, 100% 10%, 100% 100%, 50% 90%, 0% 100%);
 }
 
+@media (orientation: landscape){
+    .contact-background{
+        clip-path: none;
+    }
+}
+
 .footer{
     color: $dark-blue;
 

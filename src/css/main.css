@@ -157,6 +157,10 @@ body.loading {
   width: 100%;
   clip-path: polygon(0 10%, 50% 0, 100% 10%, 100% 100%, 50% 90%, 0% 100%); }
 
+@media (orientation: landscape) {
+  .contact-background {
+    clip-path: none; } }
+
 .footer {
   color: #00222b; }
   .footer a:visited {
@@ -489,6 +493,10 @@ body.loading {
       color: white;
       text-shadow: -1px 2px 2px black;
       cursor: pointer; }
+
+@media (orientation: landscape) {
+  .contact .contact__form {
+    clip-path: none; } }
 
 .loading-screen {
   background-color: white;
