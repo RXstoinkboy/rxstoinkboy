@@ -1,5 +1,9 @@
 # RXstoinkboy portfolio
-My portfolio website. This is my place to show all things that I have done. It was build as my first standalone website. Done only with basic tooling. No advanced framework used. 
+My portfolio website. This is my place to show all things that I have done. It was build as my first standalone website. Done only with basic tooling. No advanced frameworks used. 
+
+Portfolio template will be replaced with live exmaples of my future work.
+
+[watch preview](https://rxstoinkboy.github.io/rxstoinkboy/)
 
 ## Usage
 These are instructions needed for you in order to download this repo and run it on your local machine.
@@ -29,13 +33,28 @@ npm run server
 npm run watch
 ```
 
-5. Feel free to modify the code and see he changes updaed live in your browser. 
+5. Feel free to modify the code and see he changes updated live in your browser. 
 
 ## Technology
-1. ES6
-2. SASS
-3. 
+1. [ES6][2] - used mostly 2015+ syntax
+2. [SASS][3] - used for styling on top of regular CSS3
+3. [webpack][4] + [Babel][5] - used for boudling JS and for compatibility in older browsers
+4. [Eslint][6] - to keep consistent JS style together with airbnb plugin
+5. [Lodash][7] - used for debouncing of scroll events
+6. [Browser-sync][8] - for monitoring changes in code 'on the fly'
+7. [Chokidar][9] - for watching for changes in npm scripts
 
-## Licence
+## License
+
+This project is licensed under the MIT License - details in [LICENSE.md][10] file.
 
 [1]: https://nodejs.org/en/
+[2]: https://www.ecma-international.org/default.htm
+[3]: https://sass-lang.com/
+[4]: https://webpack.js.org/
+[5]: https://babeljs.io/
+[6]: https://eslint.org/
+[7]: https://lodash.com/
+[8]: https://www.browsersync.io/
+[9]: https://www.npmjs.com/package/chokidar
+[10]: https://github.com/RXstoinkboy/rxstoinkboy/blob/master/LICENSE.md
