@@ -311,7 +311,7 @@ body.loading {
     .project:hover {
       box-shadow: -1px 3px 15px black; }
     .project:hover .container__project {
-      filter: blur(3px); } }
+      filter: blur(3px) opacity(0.2) saturate(0.5); } }
   .project .project__watch {
     width: 200px;
     height: 50px;
@@ -340,9 +340,16 @@ body.loading {
     bottom: 40%;
     left: 50%;
     opacity: 0;
+    text-align: center;
     transform: translateX(-50%);
-    color: #00222b;
-    transition: all 0.4s ease 0.1s; }
+    color: #8fbad1;
+    transition: all 0.4s ease 0.1s;
+    text-shadow: -1px 2px 0 #00222b; }
+    .project .project__text::first-line {
+      color: #00222b;
+      font-size: 2em;
+      font-weight: 700;
+      text-shadow: -1px 1px 0 #8fbad1; }
 
 .project--active {
   opacity: 1;
@@ -415,6 +422,9 @@ body.loading {
   background-size: cover;
   transform: scale(1.05);
   transition: all 0.3s ease; }
+
+.container__project1 {
+  background-image: url("../images/Queen-tribute-page.png"); }
 
 .skills-list {
   display: flex;
