@@ -18,7 +18,7 @@
    </div>
 
    <!-- first page (homepage) STARTS here -->
-   <header class='header'>
+   <header class='header' id="welcome-section">
 
       <section class="hello">
          <h1 class="hello__intro">Hello, I'm <span class='hello__intro hello__intro--name'>Eryk Ludwin</span></h1>
@@ -40,20 +40,30 @@
          <ul class="nav__menu">
             <li class="menu__item" data-nav='header'>
                <i class="menu__icon fas fa-home"></i>
-               <span class="menu__text">HOME</span>
+               <a class="menu__text">HOME</a>
             </li>
-            <li class="menu__item" data-nav='projects'><i class="menu__icon fas fa-laptop-code"></i><span class="menu__text"
-                  data-nav='projects'>PORTFOLIO</span></li>
-            <li class="menu__item" data-nav='about'><i class="menu__icon fas fa-user-tie"></i><span class="menu__text"
-                  data-nav='about'>ABOUT ME</span></li>
-            <li class="menu__item" data-nav='contact'><i class="menu__icon fas fa-envelope"></i><span class="menu__text">CONTACT</span></li>
-            <li class="menu__item"><i class="menu__icon fas fa-file"></i><span class="menu__text">RESUME</span></li>
+            <li class="menu__item" data-nav='projects'>
+               <i class="menu__icon fas fa-laptop-code"></i>
+               <a class="menu__text" data-nav='projects'>PORTFOLIO</a>
+            </li>
+            <li class="menu__item" data-nav='about'>
+               <i class="menu__icon fas fa-user-tie"></i>
+               <a class="menu__text" data-nav='about'>ABOUT ME</a>
+            </li>
+            <li class="menu__item" data-nav='contact'>
+               <i class="menu__icon fas fa-envelope"></i>
+               <a class="menu__text">CONTACT</a>
+            </li>
+            <li class="menu__item">
+               <i class="menu__icon fas fa-file"></i>
+               <a class="menu__text">RESUME</a>
+            </li>
          </ul>
 
          <div class="nav__media">
-            <a href="https://codepen.io/rxstoinkboy/"><i class="media__icon fab fa-codepen"></i></a>
-            <a href="https://github.com/RXstoinkboy"><i class="media__icon fab fa-github-square"></i></a>
-            <a href="https://www.linkedin.com/in/eryk-ludwin-729933b3/"><i class="media__icon fab fa-linkedin"></i></a>
+            <a target="_blank" href="https://codepen.io/rxstoinkboy/"><i class="media__icon fab fa-codepen"></i></a>
+            <a target="_blank" href="https://github.com/RXstoinkboy" id="profile-link"><i class="media__icon fab fa-github-square"></i></a>
+            <a target="_blank" href="https://www.linkedin.com/in/eryk-ludwin-729933b3/"><i class="media__icon fab fa-linkedin"></i></a>
             <i class="media__icon fas fa-rss-square"></i>
          </div>
 
@@ -74,7 +84,8 @@
 
       <!-- mebile menu content start -->
 
-      <nav class="mobileMenu">
+      <nav class="mobileMenu" id="navbar">
+         <a href="#"></a>
          <ul class="list">
             <li class="list__item" data-nav='header'>HOME</li>
             <li class="list__item" data-nav='projects'>PROJECT</li>
@@ -94,52 +105,53 @@
       </div>
       <!-- back button satrts here -->
 
-<!-- popup window with info about project -->
+      <!-- popup window with info about project -->
 
-<div class="details">
-      <span class="details__close">CLOSE</span>
-      <img class="details__min-img" src="./dist/images/background3-mod.jpg">
-      <article class="details__info">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos
-         maxime dolor ex, debitis reiciendis impedit cupiditate natus? Dolorem, accusamus sint quisquam dicta,
-         accusantium labore provident alias natus deserunt quia facere nisi iusto? Aperiam odit, similique
-         adipisci assumenda dignissimos iusto, tempora dolorum debitis excepturi ad at, a voluptatibus.
-         Laborum, accusamus repellat.
-      </article>
-      <a class="datails__git" href="#"></a>
-   </div>
+      <div class="details">
+         <span class="details__close">CLOSE</span>
+         <img class="details__min-img" src="./dist/images/background3-mod.jpg">
+         <article class="details__info">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos
+            maxime dolor ex, debitis reiciendis impedit cupiditate natus? Dolorem, accusamus sint quisquam dicta,
+            accusantium labore provident alias natus deserunt quia facere nisi iusto? Aperiam odit, similique
+            adipisci assumenda dignissimos iusto, tempora dolorum debitis excepturi ad at, a voluptatibus.
+            Laborum, accusamus repellat.
+         </article>
+         <a class="datails__git" href="#"></a>
+      </div>
 
-   <!-- end of popup code -->
+      <!-- end of popup code -->
 
       <!-- projects section STARTS here -->
-      <section class="projects">
+      <section class="projects" id="projects">
+         <a href="#"></a>
          <h2 class="title">My projects</h2>
          <div class="projects__container">
-            <div class="project">
+            <div class="project project-tile">
                <div class="container__project container__project1"></div>
                <span class="project__text">Queen</br>Tribute page</span>
                <span class="project__watch" data-project="project1">SEE MORE</span>
             </div>
-            <div class="project">
-               <div class="container__project"></div>
+            <div class="project project-tile">
+               <div class="container__project container__project2"></div>
                <span class="project__text">LOREM IPSUM</span>
                <span class="project__watch" data-project="project2">SEE MORE</span>
             </div>
-            <div class="project">
+            <div class="project project-tile">
                <div class="container__project"></div>
                <span class="project__text">LOREM IPSUM</span>
                <span class="project__watch" data-project="project3">SEE MORE</span>
             </div>
-            <div class="project">
+            <div class="project project-tile">
                <div class="container__project"></div>
                <span class="project__text">LOREM IPSUM</span>
                <span class="project__watch" data-project="project4">SEE MORE</span>
             </div>
-            <div class="project">
+            <div class="project project-tile">
                <div class="container__project"></div>
                <span class="project__text">LOREM IPSUM</span>
                <span class="project__watch" data-project="project5">SEE MORE</span>
             </div>
-            <div class="project">
+            <div class="project project-tile">
                <div class="container__project"></div>
                <span class="project__text">LOREM IPSUM</span>
                <span class="project__watch" data-project="project6">SEE MORE</span>
@@ -230,9 +242,9 @@
             <span class="contact__title">Contact</span>
             <a class="contact__data" href="mailto:erykludwin@gmail.com">mail: erykludwin@gmail.com</a>
             <div class="contact__icons">
-                  <a href="https://codepen.io/rxstoinkboy/"><i class="media__icon fab fa-codepen"></i></a>
-                  <a href="https://github.com/RXstoinkboy"><i class="media__icon fab fa-github-square"></i></a>
-                  <a href="https://www.linkedin.com/in/eryk-ludwin-729933b3/"><i class="media__icon fab fa-linkedin"></i></a>
+               <a href="https://codepen.io/rxstoinkboy/"><i class="media__icon fab fa-codepen"></i></a>
+               <a href="https://github.com/RXstoinkboy"><i class="media__icon fab fa-github-square"></i></a>
+               <a href="https://www.linkedin.com/in/eryk-ludwin-729933b3/"><i class="media__icon fab fa-linkedin"></i></a>
                <!-- <i class="contact__icon fab fa-facebook-square"></i> -->
             </div>
 
@@ -248,7 +260,7 @@
    </section>
 
    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.11/lodash.min.js"></script>
-   <!-- <script type='module' src="dist/js/main.min.js"></script> -->
+   <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
    <script src="dist/js/main.min.js"></script>
 
 </body>
