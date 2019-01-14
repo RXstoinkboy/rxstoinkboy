@@ -16,8 +16,13 @@ html {
     padding: 0;
 }
 
+a {
+    color: inherit;
+    text-decoration: inherit;
+  }
+
 a:visited{
-    color: white;
+    color: inherit;
 }
 
 // prevent scrolling while loading
