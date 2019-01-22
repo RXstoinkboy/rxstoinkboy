@@ -433,6 +433,9 @@ body.loading {
 .container__project2 {
   background-image: url("../images/survey-form.png"); }
 
+.container__project3 {
+  background-image: url("../images/bikeLandingPage2.PNG"); }
+
 .skills-list {
   display: flex;
   align-items: center;
