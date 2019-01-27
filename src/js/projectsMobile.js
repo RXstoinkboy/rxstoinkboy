@@ -10,7 +10,7 @@ export function handleMobile(e) {
     project1: './dist/images/Queen-tribute-page.png',
     project2: './dist/images/survey-form.png',
     project3: './dist/images/bikeLandingPage2.png',
-    // project4: './dist/images/background3-mod.jpg',
+    project4: './dist/images/LoremDocumentation.jpg',
     // project5: './dist/images/background3-mod.jpg',
     // project6: './dist/images/background3-mod.jpg',
   };
@@ -20,7 +20,7 @@ export function handleMobile(e) {
     project1: 'This is a tribute page about Queen band. I prepared it as an exercise for FCC certification in Responsive Web Design. It was prepared with pure ES6 and SASS for styling. It is a quite simple desing but I tried to make it a bit more attractive.',
     project2: 'This project is my approach to make a solid survey-form example with solid semantics and custom form validation with JS used. In the future there might be additional backend script added to handle data got from the form. Besides that, all functionality is fully prepared. Form is prepared with CSS grid usage. I also added custom feel and look to inputs.',
     project3: 'It is a landing page for selling a bike. Website is prepared for FCC RWD certification. Made using SASS and vanilla JS. Burger menu in this project is quite good. It was inspired by project found on web, but built on my own.',
-    // project4: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos maxime dolor ex, debitis reiciendis impedit cupiditate natus? Dolorem, accusamus sint quisquam dicta, accusantium labore provident alias natus deserunt quia facere nisi iusto? Aperiam odit, similique adipisci assumenda dignissimos iusto, tempora dolorum debitis excepturi ad at, a voluptatibus. Laborum, accusamus repellat.',
+    project4: '"Lorem documentation" is an example documentation application. It has several comfortable features like toggle dark mode, change font size. You can also fetch additional fake data from a different server to get more data about a certain topic. In order to find a topic of your interest you can also simply use a convenient search bar. Layout was build with CSS grid. Fetch is performed with async/await function.',
     // project5: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos maxime dolor ex, debitis reiciendis impedit cupiditate natus? Dolorem, accusamus sint quisquam dicta, accusantium labore provident alias natus deserunt quia facere nisi iusto? Aperiam odit, similique adipisci assumenda dignissimos iusto, tempora dolorum debitis excepturi ad at, a voluptatibus. Laborum, accusamus repellat.',
     // project6: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos maxime dolor ex, debitis reiciendis impedit cupiditate natus? Dolorem, accusamus sint quisquam dicta, accusantium labore provident alias natus deserunt quia facere nisi iusto? Aperiam odit, similique adipisci assumenda dignissimos iusto, tempora dolorum debitis excepturi ad at, a voluptatibus. Laborum, accusamus repellat.',
   };
@@ -30,7 +30,7 @@ export function handleMobile(e) {
     project1: 'https://github.com/RXstoinkboy/Tribute-page',
     project2: 'https://github.com/RXstoinkboy/survey-form',
     project3: 'https://github.com/RXstoinkboy/bikeLandingPage',
-    // project4: 'https://github.com/RXstoinkboy/Tribute-page',
+    project4: 'https://github.com/RXstoinkboy/documentationPage',
     // project5: 'https://github.com/RXstoinkboy/Tribute-page',
     // project6: 'https://github.com/RXstoinkboy/Tribute-page',
   };
