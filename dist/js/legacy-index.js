@@ -265,7 +265,7 @@ function handleMobile(e) {
     // project6: 'https://github.com/RXstoinkboy/Tribute-page',
   };
 
-  details.style.display = 'block';
+  details.style.display = 'flex';
   detailsImg.src = `${pictures[e.target.dataset.project]}`;
   detailsInfo.innerText = `${texts[e.target.dataset.project]}`;
   detailsLink.href = `${links[e.target.dataset.project]}`;
