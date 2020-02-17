@@ -45,6 +45,16 @@ window.addEventListener('DOMContentLoaded', () => {
       backButton.style.opacity = '0';
     }
   }
+  
+  function getYear(){
+    const footer = document.querySelector('.footer');
+    
+    const now = new Date().getFullYear();
+    
+    footer.innerText = `&copy; ${now}`;
+  }
+  
+  getYear();
 
   // event listeners
   mobileMenuButton.addEventListener('click', toggleMenu);
